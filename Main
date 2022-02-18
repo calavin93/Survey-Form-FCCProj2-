@@ -1,0 +1,246 @@
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
+<style>
+:root {
+  --color-white: #f3f3f3;
+  --color-darkblue: #1b1b32;
+  --color-darkblue-alpha: rgba(27, 27, 50, 0.8);
+  --color-green: #37af65;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: var(--color-white);
+  margin: 0;
+}
+
+/* mobile friendly alternative to using background-attachment: fixed */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  background: var(--color-darkblue);
+  background-image: linear-gradient(
+      115deg,
+      rgba(58, 58, 158, 0.8),
+      rgba(136, 136, 206, 0.7)
+    ),
+    url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h1 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+p {
+  font-size: 1.125rem;
+}
+
+h1,
+p {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  font-size: 1.125rem;
+  margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button {
+  border: none;
+}
+
+.container {
+  width: 100%;
+  margin: 3.125rem auto 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+.header {
+  padding: 0 0.625rem;
+  margin-bottom: 1.875rem;
+}
+
+.description {
+  font-style: italic;
+  font-weight: 200;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
+}
+
+.clue {
+  margin-left: 0.25rem;
+  font-size: 0.9rem;
+  color: #e4e4e4;
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* form */
+
+form {
+  background: var(--color-darkblue-alpha);
+  padding: 2.5rem 0.625rem;
+  border-radius: 0.25rem;
+}
+
+@media (min-width: 480px) {
+  form {
+    padding: 2.5rem;
+  }
+}
+
+.form-group {
+  margin: 0 auto 1.25rem auto;
+  padding: 0.25rem;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  height: 2.375rem;
+  padding: 0.375rem 0.75rem;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.input-radio,
+.input-checkbox {
+  display: inline-block;
+  margin-right: 0.625rem;
+  min-height: 1.25rem;
+  min-width: 1.25rem;
+}
+
+.input-textarea {
+  min-height: 120px;
+  width: 100%;
+  padding: 0.625rem;
+  resize: vertical;
+}
+
+.submit-button {
+  display: block;
+  width: 100%;
+  padding: 0.75rem;
+  background: var(--color-green);
+  color: inherit;
+  border-radius: 2px;
+  cursor: pointer;
+}
+</style>
+
+<html>
+<body>
+<main id="main">
+  <h1 id="title">Dr Norman Borlaug</h1>
+  <h5>The man who saved a billion lives</h5>
+
+  <figure id="img-div">
+    <img id="image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute-page-main-image.jpg" alt="Photo of Camper Cat executing a roundhouse kick">
+    <br>
+    <figcaption id="img-caption">
+      Dr. Norman Borlaug, third from the left, trains biologists in Mexico on how to increase wheat yields - part of his life-long war on hunger.
+    </figcaption>
+  </figure>
+  <section id="tribute-info">
+    <h3>Here's a time line of Dr Borlaug's life:</h3>
+    <ul>
+      <li><strong>1914</strong> - Born in Cresco, Iowa
+      </li>
+      <li><strong>1933</strong> - Leaves his family's farm to attend the University of Minnesota, thanks to a Depression era program known as the "National Youth Administration"
+      </li>
+      <li><strong>1914</strong> - Born in Cresco, Iowa
+      </li>
+      <li><strong>1935</strong> - Has to stop school and save up more money. Works in the Civilian Conservation Corps, helping starving Americans. "I saw how food changed them", he said. "All of this left scars on me."
+      </li>
+      <li><strong>1937</strong> - Finishes university and takes a job in the US Forestry Service
+      </li>
+      <li><strong>1938</strong> - Marries wife of 69 years Margret Gibson. Gets laid off due to budget cuts. Inspired by Elvin Charles Stakman, he returns to school study under Stakman, who teaches him about breeding pest-resistent plants.
+      </li>
+      <li><strong>1941</strong> - Tries to enroll in the military after the Pearl Harbor attack, but is rejected. Instead, the military asked his lab to work on waterproof glue, DDT to control malaria, disinfectants, and other applied science.
+      </li>
+      <li><strong>1942</strong> - Receives a Ph.D. in Genetics and Plant Pathology
+      </li>
+      <li><strong>1944</strong> - Rejects a 100% salary increase from Dupont, leaves behind his pregnant wife, and flies to Mexico to head a new plant pathology program. Over the next 16 years, his team breeds 6,000 different strains of disease resistent wheat - including different varieties for each major climate on Earth.
+      </li>
+      <li><strong>1945</strong> - Discovers a way to grown wheat twice each season, doubling wheat yields
+      </li>
+      <li><strong>1953</strong> - crosses a short, sturdy dwarf breed of wheat with a high-yeidling American breed, creating a strain that responds well to fertilizer. It goes on to provide 95% of Mexico's wheat.
+      </li>
+      <li><strong>1962</strong> - Visits Delhi and brings his high-yielding strains of wheat to the Indian subcontinent in time to help mitigate mass starvation due to a rapidly expanding population
+      </li>
+      <li><strong>1970</strong> - receives the Nobel Peace Prize
+      </li>
+      <li><strong>1983</strong> - helps seven African countries dramatically increase their maize and sorghum yields
+      </li>
+      <li><strong>1984</strong> - becomes a distinguished professor at Texas A&M University
+      </li>
+      <li><strong>2005</strong> - states "we will have to double the world food supply by 2050." Argues that genetically modified crops are the only way we can meet the demand, as we run out of arable land. Says that GM crops are not inherently dangerous because "we've been genetically modifying plants and animals for a long time. Long before we called it science, people were selecting the best breeds."
+      </li>
+
+      <li><strong>2009</strong> - dies at the age of 95.
+      </li>
+
+    </ul>
+
+    <p> "Borlaug's life and achievement are testimony to the far-reaching contribution that one man's towering intellect, persistence and scientific vision can make to human peace and progress."</p>
+
+    <p> -- Indian Prime Minister Manmohan Singh</p>
+    <h3>If you have time, you should read more about this incredible human being on his <a id="tribute-link" href="https://en.wikipedia.org/wiki/Norman_Borlaug" target="_blank">Wikipedia entry</a>.</h3>
+  </section>
+</main>
+</body>
+</html>
